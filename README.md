@@ -16,6 +16,19 @@ What is the difference between `justify-content` and `align-items` in Flexbox? H
 
 ### Response 2
 
+The difference between `justify-content` and `align-items` in Flexbox is the axis that it controls the alignment of items on. The `justify-content` property controls the alignment and positioning of flex items on the main axis within the container, while the `align-items` property controls the alignment and positioning of flex items on the cross axis.
+
+The main axis is the primary direction in which flex items are laid out, determined by the `flex-direction` property. For example:
+
+- If `flex-direction` is `row` (default), the main axis runs horizontally from left to right.
+- If `flex-direction` is `column`, the main axis runs vertically from top to bottom.
+
+The `justify-content` property controls the alignment and spacing of flex items along the main axis. It can align items to the start, center, or end of the main axis, or distribute them evenly with spacing options like space-between, space-around, or space-evenly.
+
+The cross axis is perpendicular to the main axis. If the main axis is horizontal (`flex-direction: row`), the cross axis runs vertically, and if the main axis is vertical (`flex-direction: column`), the cross axis runs horizontally.
+
+- The align-items property controls the alignment of flex items along the cross axis. For example, it can align items to the start, center, or end of the cross axis, or stretch them to fill the container's cross-axis space.
+
 ## Prompt 3
 
 Describe the difference between `grid-template-areas` and `grid-template-columns`/`grid-template-rows`. When might you prefer one approach over the other?
@@ -48,7 +61,14 @@ In cases where the grid's alignment and spacing (gaps) are more critical than th
 
 Explain the `min-width` and `max-width` keywords in media queries. How do they help create responsive breakpoints for different screen sizes?
 
-### Response 4-
+### Response 4
+
+The `min-width` and `max-width` keywords in media queries are features that allow us to apply specific styles to a webpage based on the screen width of a user's device.
+
+- The `min-width` media query applies styles to a webpage only when the screen width is **greater** than or **equal** to a certain minimum width value.
+- The `max-width` media query applies styles to a webpage only when the screen width is **less** than or **equal** to a certain maximum width value.
+
+These keywords help us create responsive breakpoints for different screen sizes, allowing websites to adapt gracefully to different devices, such as desktops, tablets, and mobile phones, for a better user experience.
 
 ## Prompt 5
 
