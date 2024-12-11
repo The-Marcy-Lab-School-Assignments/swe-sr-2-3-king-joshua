@@ -81,3 +81,62 @@ Imagine you are teaching a brief lesson on **mobile first design**. Your lesson 
 ### Response 5
 
 Here’s a mobile-first approach to styling a container that adjusts from a single-column layout on mobile to a two-column layout on larger screens.
+Lesson: Introduction to Mobile First Design
+What is Mobile First Design?
+Mobile First Design is a design philosophy that prioritizes creating a seamless user experience on mobile devices before scaling up to larger screens like tablets or desktops. This approach involves designing layouts and features for smaller screens first and progressively enhancing the design for larger viewports using techniques like media queries.
+Benefits of Mobile First Design:
+Improved User Experience: Ensures that the core functionality is optimized for mobile users, who often form the majority of web traffic.
+Faster Load Times: Smaller screens force you to prioritize content and optimize performance, leading to faster loading times.
+Scalability: Designs are more adaptable when built from small screens up, ensuring that content flows logically as screen size increases.
+SEO Benefits: Search engines, like Google, favor mobile-friendly sites in their rankings, improving visibility.
+CSS Code Example: Mobile First Layout Using Flexbox
+Below is an example of a layout that starts with a mobile-friendly single-column layout and adjusts to a two-column layout on larger screens using media queries.
+html
+Copy code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile First Design</title>
+  <style>
+    /* Base (mobile-first) styles */
+    .container {
+      display: flex;
+      flex-direction: column; /* Stacks items vertically */
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .item {
+      background-color: #F0F0F0;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      text-align: center;
+    }
+    /* Desktop styles: two-column layout */
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row; /* Arranges items horizontally */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+</body>
+</html>
+Explanation of the Code
+Mobile-First Base Styles:
+The .container uses display: flex with flex-direction: column, stacking items vertically by default.
+A gap property ensures spacing between items, and padding provides breathing room inside the container.
+These base styles cater to mobile users, ensuring the layout is simple and legible on small screens.
+Media Query for Larger Screens:
+The @media (min-width: 768px) rule applies styles for devices with a viewport width of at least 768 pixels (e.g., tablets and desktops).
+flex-direction: row changes the layout to arrange items horizontally in a two-column layout, better utilizing the available screen space.
+Responsive Design in Action:
+As users access the site on larger screens, the layout automatically adjusts, providing an optimized experience without sacrificing the mobile-first approach.
